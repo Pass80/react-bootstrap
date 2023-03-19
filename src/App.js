@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl, Button, Stack } from 'react-bootstrap';
 
 
 function App() {
@@ -24,26 +24,53 @@ function App() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
+
+
       <Container>
-        <Row>
-          <Col>1 of 4</Col>
-          <Col>2 of 4</Col>
-          <Col>3 of 4</Col>
-          <Col>4 of 4</Col>
+        <Row xs={2} md={4} lg={6}>
+          <Col>1 of 2</Col>
+          <Col>2 of 2</Col>
         </Row>
-        <Row>
-          <Col>1 of 4</Col>
-          <Col>2 of 4</Col>
-          <Col>3 of 4</Col>
-          <Col>4 of 4</Col>
+        <Row xs={1} md={2}>
+          <Col>1 of 3</Col>
+          <Col>2 of 3</Col>
+          <Col>3 of 3</Col>
         </Row>
-        <Row>
-          <Col>1 of 4</Col>
-          <Col>2 of 4</Col>
-          <Col>3 of 4</Col>
-          <Col>4 of 4</Col>
+        <Row xs="auto">
+          <Col>1 of 3</Col>
+          <Col>2 of 3</Col>
+          <Col>3 of 3</Col>
         </Row>
       </Container>
+
+      <Stack direction="horizontal" gap={3}>
+        <Form.Control className="me-auto" placeholder="Add your item here..." />
+        <Button variant="secondary">Submit</Button>
+        <div className="vr" />
+        <Button variant="outline-danger">Reset</Button>
+      </Stack>
+
+      <div className='formen'>
+        <Form>
+          <Form.Group className='mb-3' controlId='formBasicEmail'>
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type='email' placeholder='Enter email' />
+            <Form.Text className='text-muted'> We will never share you e-maiol address</Form.Text>
+          </Form.Group>
+          <Form.Group className='mb-3' controlId='formBasicPassword'>
+            <Form.Label>Password</Form.Label>
+            <Form.Control type='password' placeholder='Enter your Password' />
+            <Form.Text className='text-muted'> Password must be more than 6 letters</Form.Text>
+          </Form.Group>
+          <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+            <Form.Label>Password</Form.Label>
+            <Form.Check type='checkbox' label='Check me out' />
+          </Form.Group>
+          <Button variant='primary' type
+            ='submit'> Submit</Button>
+        </Form>
+      </div>
+
 
 
     </div>

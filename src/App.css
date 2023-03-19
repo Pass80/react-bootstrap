@@ -7,4 +7,17 @@ h1 {
 form {
     display: flex;
     gap: 1rem;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 4rem;
+}
+
+form button {
+    width: 10%;
+}
+
+.formen {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
 }
